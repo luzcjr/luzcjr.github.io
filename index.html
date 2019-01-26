@@ -2,22 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Carlos Luz</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
     <style>
       body {
         font-family: 'Ubuntu Mono', monospace;
-        font-size: 16px;
-        line-height: 20px;
+      }
+      .center-content {
+           text-align: center;
       }
       a:active, a:link, a:visited, a:hover {
         color: #457EAA;
         text-decoration: none;
       }
-      .center-content {
-           margin: 30px auto;
-           width: 580px;
-           text-align: center;
+      /* Desktops */
+      @media screen and (min-width: 1024px) {
+        body {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .center-content {
+             margin: 30px auto;
+             width: 30%;
+        }
+      }
+      /* Tablets */
+      @media screen and (min-width: 640px) and (max-width: 1024px) {
+        body {
+          font-size: 17px;
+          line-height: 22px;
+        }
+      }
+      /* Phones */
+      @media screen and (max-width: 640px) {
+        body {
+          font-size: 18px;
+          line-height: 25px;
+        }
       }
     </style>
   </head>
