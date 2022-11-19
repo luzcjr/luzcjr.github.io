@@ -28,9 +28,18 @@
           line-height: 20px;
         }
         .center-content {
-             margin: 30px auto;
-             width: 30%;
+          margin: 30px auto;
+          width: 30%;
         }
+        .side-project {
+		  width: 250px;
+		  margin: auto;
+		}
+		.side-project img:hover {
+  		  filter: drop-shadow(0 0 0.40rem #ffffff);
+  		  padding: 15px;
+  		  margin: -15px;
+		}
       }
       /* Tablets */
       @media screen and (min-width: 640px) and (max-width: 1024px) {
@@ -51,19 +60,20 @@
   <body>
     <div class="center-content">
       <p>Hello, my name is Carlos Luz, I am a software engineer living in Toronto, Canada.</p>
-      <p>
-        <b>Professional information</b>
-        <p>I've been working in various software projects since 2003, mostly for the web and using JVM Languages.</p>
-        <p>More information on <a href="https://www.linkedin.com/in/carlosluzjr" target="_blank">LinkedIn</a>.</p>
-      </p>
-      <p>
-        <b>Side projects</b>
-        <p>I am often working on personal projects, sometimes to practice what I am studying, sometimes for fun.</p>
-        <p>From one of them I created a travel planning app for iOS/MacOS called <a href="https://www.ryokoplan.com" target="_blank">Ryokoplan</a>.</p>
-        <p>Some of the other ones can be found on <a href="https://github.com/juniorbl" target="_blank">GitHub</a>.</p>
-        <b>*</b>
-        <p>I rarely use <a href="https://twitter.com/juniorbl" target="_blank">Twitter</a> and I am not on Facebook or Instagram.</p>
-      </p>
+      <b>Professional information</b>
+      <p>I've been working in various software projects since 2003, mostly for the web and using JVM Languages.</p>
+      <p>More information on <a href="https://www.linkedin.com/in/carlosluzjr" target="_blank">LinkedIn</a>.</p>
+      <b>Side projects</b>
+      <p>I am often working on personal projects, practicing what I am studying or for fun. From them I created:</p>
+        <a href="https://www.ryokoplan.com" target="_blank">
+	        <div class="side-project">
+		        <img src="images/ryokoplan.png" alt="Ryokoplan">
+		        <p>Ryokoplan (iOS/MacOS)</p>
+	        </div>
+        </a>
+	  <p>Some of the other ones can be found on <a href="https://github.com/juniorbl" target="_blank">GitHub</a>.</p>
+      <b>*</b>
+      <p>I rarely use <a href="https://twitter.com/juniorbl" target="_blank">Twitter</a> and I am not on Facebook or Instagram.</p>
     </div>
   </body>
 </html>
