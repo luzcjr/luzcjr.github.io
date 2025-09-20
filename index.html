@@ -1,71 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Carlos Luz</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&amp;family=Monofett&amp;display=swap" rel="stylesheet">
-    <style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Luz | Software Engineer</title>
+  <meta name="description" content="Landing page for Carlos Luz, Software Engineer.">
+  <style>
+    :root {
+      --bg-color: #0b0f19;
+      --primary-text-color: #eaeaea;
+      --secondary-text-color: #a0a0a0;
+      --accent-color: #e6ac00;
+      --border-color: #2a2a2a;
+      --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      --max-width: 900px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family-sans);
+      background-color: var(--bg-color);
+      color: var(--primary-text-color);
+      line-height: 1.7;
+      display: flex;
+      justify-content: center;
+      padding: 6vh 2rem;
+    }
+
+    main {
+      max-width: var(--max-width);
+      width: 100%;
+      animation: fadeIn 0.6s ease-out both;
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--secondary-text-color);
+      font-family: var(--font-family-mono);
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border-left: 3px solid var(--accent-color);
+      padding-left: 0.75rem;
+      font-family: var(--font-family-mono);
+    }
+
+    section p {
+      color: var(--secondary-text-color);
+      font-size: 1.1rem;
+      max-width: 60ch;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: color 0.25s ease, border-color 0.25s ease;
+      font-family: var(--font-family-mono);
+    }
+
+    a:hover,
+    a:focus {
+      color: #ffd966;
+      border-bottom-color: var(--accent-color);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+
+    footer {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      color: var(--secondary-text-color);
+      font-family: var(--font-family-mono);
+    }
+
+    @media (max-width: 768px) {
       body {
-        font-family: 'JetBrains+Mono', monospace;
-        color: #c6d0f5;
-        background-color: #232634;
+        padding: 3vh 1rem;
+        justify-content: flex-start;
       }
-      .center-content {
-           text-align: center;
+      h1 {
+        font-size: 2rem;
       }
-      b {
-        color: #e78284;
+      .subtitle,
+      section p {
+        font-size: 1rem;
       }
-      a:active, a:link, a:visited, a:hover {
-        color: #85c1dc;
-        text-decoration: none;
-      }
-      /* Desktops */
-      @media screen and (min-width: 1024px) {
-        body {
-          font-size: 16px;
-          line-height: 20px;
-        }
-        .center-content {
-          margin: 30px auto;
-          width: 35%;
-        }
-        .side-project {
-		  width: 250px;
-		  margin: auto;
-		}
-		.side-project img {
-		  filter: drop-shadow(4px 4px 5px #707070);
-		}
-      }
-      /* Tablets */
-      @media screen and (min-width: 640px) and (max-width: 1024px) {
-        body {
-          font-size: 17px;
-          line-height: 22px;
-        }
-      }
-      /* Phones */
-      @media screen and (max-width: 640px) {
-        body {
-          font-size: 18px;
-          line-height: 25px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="center-content">
-      <p>Hello, my name is Carlos Luz, I am a software engineer based in Toronto, Canada.</p>
-      <b>Professional information</b>
-      <p>I've been working in various software projects since 2003, mostly for the web and using JVM Languages.</p>
-      <p>More information on <a href="https://www.linkedin.com/in/carlosluzjr" target="_blank">LinkedIn</a>.</p>
-      <b>Side projects</b>
-      <p>I am often working on personal projects, practicing what I am studying or for fun.</p>
-      <p>Some of them can be found on <a href="https://github.com/luzcjr" target="_blank">GitHub</a>.</p>
-      <b>*</b>
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Carlos Luz</h1>
+      <p class="subtitle">Software Engineer | Toronto, Canada</p>
+    </header>
+    <section id="professional">
+      <h2>Professional Information</h2>
+      <p>I've been working in various software projects since 2003, mostly for the web and using JVM languages. More information on <a href="https://www.linkedin.com/in/carlosluzjr" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+    </section>
+    <section id="projects">
+      <h2>Side Projects</h2>
+      <p>I am often working on personal projects, practicing what I am studying or for fun. Some of them can be found on <a href="https://github.com/luzcjr" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    </section>
+    <footer>
       <p>I am not active on any social media platforms.</p>
-    </div>
-  </body>
+    </footer>
+  </main>
+</body>
 </html>
